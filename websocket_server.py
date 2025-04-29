@@ -5,7 +5,7 @@ import os
 
 MQTT_TOPIC_ON = "light/schedule/on"
 MQTT_TOPIC_OFF = "light/schedule/off"
-MQTT_HOST = "localhost"  # or your broker IP
+MQTT_HOST = "157.173.101.159" 
 
 async def handle(websocket):
     async for message in websocket:
@@ -22,6 +22,6 @@ async def handle(websocket):
 async def main():
     async with websockets.serve(handle, "localhost", 6789):
         print("WebSocket Server listening on ws://localhost:6789")
-        await asyncio.Future()  # run forever
+        await asyncio.Future()  
 
 asyncio.run(main())

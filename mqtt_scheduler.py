@@ -4,9 +4,9 @@ import time
 from datetime import datetime
 import serial
 
-SERIAL_PORT = "COM9"  # Update for your system
+SERIAL_PORT = "COM9"  
 BAUD_RATE = 9600
-MQTT_BROKER = "localhost"  # or broker IP
+MQTT_BROKER = "157.173.101.159" 
 
 arduino = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
 time.sleep(2)
